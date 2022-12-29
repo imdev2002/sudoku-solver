@@ -86,3 +86,12 @@ h1 {
 *:nth-child(n + 55):nth-child(-n + 63) {
   border-top: 1px solid black;
 }
+
+.box-emty {
+  color: red;
+  background: #fff;
+}
+.box-has-value {
+  color: black;
+  background: #3498db91;
+}

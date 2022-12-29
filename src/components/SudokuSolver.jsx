@@ -93,7 +93,7 @@ export default function SudokuSolver() {
                 storageService.setBoard(randomGrid);
               }}
             >
-              Example Board
+              Ví dụ ngẫu nhiên
             </Button>
             <br />
             {isSolving ? (
@@ -102,7 +102,7 @@ export default function SudokuSolver() {
                 variant="dark"
                 onClick={() => window.location.reload()}
               >
-                Stop
+                Dừng
               </Button>
             ) : (
               <Button
@@ -110,22 +110,21 @@ export default function SudokuSolver() {
                 variant="dark"
                 onClick={handleSolveButtonClicked}
               >
-                Solve
+                Giải
               </Button>
             )}
             <FormCheck
               className="mt-3"
               type="checkbox"
-              label="Show solving process"
+              label="Hiển thị quá trình giải câu đố"
               disabled={isSolving}
               checked={isShowProcessChecked}
               onChange={(e) => setIsShowProcessChecked(e.target.checked)}
             />
             {isShowProcessChecked ? (
               <p className="mt-3 text-danger">
-                If you show solving process on difficult sudoku puzzles it can
-                take very long time. Uncheck show solving process if you wanna
-                solve difficult puzzles.
+                Nếu gặp một câu đố Sudoku khó, bạn nên bỏ chọn Xem tiến trình.
+                Vì nó sẽ mất nhiều thời gian trong việc giải các câu đố khó!
               </p>
             ) : (
               ""
